@@ -36,6 +36,13 @@ This project models how analytics systems should be built in production environm
 - Modular planning and execution layers
 - Unit-tested core logic for correctness
 
+## Design Guarantees
+- Metrics are computed only from predefined, versioned definitions
+- Invalid joins, filters, and time-grains are rejected before execution
+- SQL queries are statically validated for safety and correctness
+- LLM output is treated as untrusted and strictly constrained
+- Every response is explainable and traceable to metadata
+
 ## Technology Stack
 - Python
 - FastAPI
