@@ -1,0 +1,25 @@
+# Core typing & validation
+pydantic>=2.0
+
+# YAML metadata
+pyyaml
+
+# API layer (later)
+fastapi
+uvicorn
+
+# SQL parsing & validation
+sqlglot
+
+# Database
+sqlalchemy
+psycopg2-binary
+
+# LLM client
+openai            
+
+# Caching
+cachetools
+
+# Testing
+pytest

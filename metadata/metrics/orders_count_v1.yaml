@@ -1,0 +1,49 @@
+metric_name: orders_count
+version: v1
+description: >
+  Count of completed orders.
+
+grain: orders.order_id
+
+time_column: orders.order_date
+
+tables:
+  fact: orders
+  dimensions:
+    - users
+    - products
+
+joins:
+  - left: orders.user_id
+    right: users.id
+    type: inner
+
+  - left: orders.product_id
+    right: products.id
+    type: inner
+
+measure:
+  expression: orders.order_id
+  aggregation: count
+
+required_filters:
+  - column: orders.status
+    operator: "="
+    value: COMPLETED
+
+allowed_dimensions:
+  - region
+  - product
+  - user_city
+
+allowed_filters:
+  - status
+  - region
+  - product
+
+forbidden_filters:
+  - internal_account
+
+supports_dimensions: false
+
+pii_exposure: false
