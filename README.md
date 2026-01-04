@@ -7,7 +7,8 @@ This leads to incorrect KPIs, wrong decisions, and real business impact.
 ## What This System Does
 Enterprise Analytics Copilot is a backend system that allows users to ask business questions in natural language and receive **correct, explainable, and policy-compliant analytics results** from a relational database.
 Unlike generic text-to-SQL systems, this project enforces business logic, metric definitions, and safety constraints **before** any query is executed.
-- Why This Project Matters
+- **Why This Project Matters**:
+
 This project models how analytics systems should be built in production environments:  
 **correctness first, explainability by design, and LLMs used as controlled components rather than sources of truth.**
 
